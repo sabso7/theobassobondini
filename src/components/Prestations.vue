@@ -1,6 +1,6 @@
 <template>
 <v-main>
-    <v-container id="service_block"  :class="$mq">
+    <v-container id="service_block" :class="$mq">
         <v-row align="center" justify="center">
             <v-col sm="9" cols="12" md="9" lg="6" class="block_img_presta">
                 <v-row id="block_img_serv" align="center" justify="center" :class="$mq">
@@ -10,35 +10,31 @@
                 </v-row>
             </v-col>
             <v-col sm="9" cols="9" md="9" lg="6" class="block_text_presta" :class="$mq">
-                <v-row>
-                    <h4 class="title_section" :class="$mq">Création de site sur mesure</h4>
-                </v-row>
-                <v-row class="fade_in_right">
-                    <v-list-item>
-                        <v-list-item-content>
-                            <v-list-item-title><span id="fonct" class="subtitle font_karla" :class="$mq">Fonctionnel</span></v-list-item-title>
-                            <v-list-item-subtitle class="description_presta">Adapté à vos besoins</v-list-item-subtitle>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-row>
-                <v-row class="fade_in_right">
-                    <v-list-item>
-                        <v-list-item-content>
-                            <v-list-item-title><span id="resp" class="subtitle font_karla" :class="$mq">Responsive</span></v-list-item-title>
-                            <v-list-item-subtitle class="description_presta">Visible sur tous les formats</v-list-item-subtitle>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-row>
-                <v-row class="fade_in_right">
-                    <v-list-item>
-                        <v-list-item-content>
-                            <v-list-item-title><span id="dyn" class="subtitle font_karla" :class="$mq">Dynamique</span></v-list-item-title>
-                            <v-list-item-subtitle class="description_presta">Entièrement modulable</v-list-item-subtitle>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-row>
+               
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <h4 class="title_section" :class="$mq">Création de site sur mesure</h4>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <span id="fonct" class="subtitle font_karla" :class="$mq">Fonctionnel</span>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <p class="description_presta">Adapté à vos besoins</p>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <span id="resp" class="subtitle font_karla" :class="$mq">Responsive</span>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <p class="description_presta">Visible sur tous les formats</p>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <span id="dyn" class="subtitle font_karla" :class="$mq">Dynamique</span>
+                    </v-row>
+                    <v-row class="fade_in_right" align="center" justify="center">
+                        <p class="description_presta">Entièrement modulable</p>
+                    </v-row>
+                
                 <div id="langage" :class="$mq">
-                    <v-row>
+                    <v-row align="center" justify="center">
                         <v-img contain class="logo_vue" :class="$mq" src="@/assets/vue_logo.png"></v-img>
                         <v-img contain class="logo_symfo" :class="$mq" src="@/assets/symfony_logo.png"></v-img>
                         <v-img contain class="logo_php" :class="$mq" src="@/assets/php_logo.png"></v-img>
@@ -62,8 +58,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 export default {
     data() {
-        return {
-        }
+        return {}
     },
     methods: {
         fadeServiceImg() {
@@ -221,6 +216,7 @@ export default {
 .title_section {
     font-size: 2.5em;
     cursor: crosshair;
+    margin: 2%;
 }
 
 .title_section.sm {
@@ -231,8 +227,12 @@ export default {
     font-size: 1.3em;
 }
 
+.sousblock_text_presta {
+    margin-left: 15%;
+}
+
 .subtitle {
-    font-size: 1.7em;
+    font-size: 2em;
     cursor: crosshair;
 }
 
@@ -258,37 +258,37 @@ span:hover {
     max-width: 100px;
 }
 
-.blue_element2.sm{
+.blue_element2.sm {
     max-height: 150px;
     max-width: 30px;
 }
 
-.blue_element2.md{
+.blue_element2.md {
     max-height: 150px;
     max-width: 30px;
 }
 
-#service_block{
+#service_block {
     margin-top: 10%;
 }
 
-#service_block.sm{
+#service_block.sm {
     margin-top: 15%;
 }
 
-#service_block.md{
+#service_block.md {
     margin-top: 15%;
 }
 
-.block_text_presta{
+.block_text_presta {
     margin-top: 0%;
 }
 
-.block_text_presta.sm{
+.block_text_presta.sm {
     margin-top: 10%;
 }
 
-.block_text_presta.md{
+.block_text_presta.md {
     margin-top: 10%;
 }
 

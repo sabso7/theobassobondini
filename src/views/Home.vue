@@ -3,7 +3,7 @@
     <v-container app pa-0 fluid>
         <section class="panel panel0">
             <v-row no-gutters align="center" justify="center" id="home_block" :class="$mq">
-                <v-col sm="6" cols="12" md="6" lg="6" id="block_title_home">
+                <v-col sm="12" cols="12" md="6" lg="6" id="block_title_home">
                     <v-row align="center" justify="center">
                         <h2 class="font_karla title_home2" :class="$mq">Théo Basso Bondini</h2>
                     </v-row>
@@ -31,6 +31,9 @@
         </section>
         <section id="section3" class="panel panel3">
             <contact></contact>
+            <v-row justify="center">
+                <v-icon v-on:click="scrollToTop" class="icon">mdi-arrow-expand-up</v-icon>
+            </v-row>
         </section>
     </v-container>
 </v-main>
@@ -68,6 +71,9 @@ export default {
             setTimeout(document.getElementById(id).scrollIntoView({
                 behavior: "smooth",
             }), 1000);
+        },
+        scrollToTop: function () {
+            window.scrollTo(0, 0);
         },
         scrollTrigger() {
             gsap.utils.toArray(".panel").forEach((panel) => {
@@ -109,6 +115,11 @@ export default {
 </script>
 
 <style>
+
+html {
+    scroll-behavior: smooth;
+}
+
 .font_karla {
     font-family: 'Karla', sans-serif;
 }
@@ -117,7 +128,7 @@ export default {
     font-size: 50px;
 }
 
-.title_home1.sm{
+.title_home1.sm {
     font-size: 30px;
 }
 
@@ -125,7 +136,7 @@ export default {
     font-size: 30px;
 }
 
-.title_home2.sm{
+.title_home2.sm {
     font-size: 20px;
 }
 
@@ -137,12 +148,13 @@ export default {
     margin-top: 13%;
 }
 
-#home_block.sm{
+#home_block.sm {
+    margin-top: 6%;
     padding-top: 35%;
 }
 
-#home_block.md{
-    padding-top: 35%;
+#home_block.md {
+    margin-top: 13%;
 }
 
 .blue_element {
@@ -153,12 +165,12 @@ export default {
     margin: 0 !important;
 }
 
-.blue_element.sm{
+.blue_element.sm {
     max-height: 400px;
     max-width: 100px;
 }
 
-.blue_element.md{
+.blue_element.md {
     max-height: 400px;
     max-width: 100px;
 }
@@ -188,7 +200,7 @@ section {
     background-color: #111516;
 }
 
-.panel2.md{
+.panel2.md {
     height: fit-content;
 }
 

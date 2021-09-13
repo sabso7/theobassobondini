@@ -4,7 +4,7 @@
         <v-row align="center" justify="center">
             <v-col sm="6" cols="12" md="6" lg="6">
                 <v-row align="center" justify="center">
-                    <h4 class="title_section" :class="$mq">Disponible pour tous vos projets</h4>
+                    <h4 class="title_section title_contact" :class="$mq">Disponible pour tous vos projets</h4>
                 </v-row>
                 <v-row class="block_coord fade_in_right" :class="$mq" align="center" justify="center">
                     <v-list-item>
@@ -22,16 +22,14 @@
                             <v-list-item-title class="subtitle font_karla" :class="$mq" >Saint-Pierre, 97410 Réunion</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item>
-                        <v-list-item-content>
+                    <v-row class="block_coord" align="center" justify="center">
                             <v-btn class="logo_contact" :class="$mq" rel="noopener" aria-label="go to github" icon href="https://github.com/sabso7" target="_blank">
                                 <v-img class="logo_contact" :class="$mq" src="@/assets/github.png"></v-img>
                             </v-btn>
                             <v-btn class="logo_contact" :class="$mq" rel="noopener" aria-label="go to linkedin" icon href="https://www.linkedin.com/in/th%C3%A9o-basso-bondini/" target="_blank">
                                 <v-img class="logo_contact" :class="$mq" src="@/assets/linkedin.png"></v-img>
                             </v-btn>
-                        </v-list-item-content>
-                    </v-list-item>
+                    </v-row>    
                 </v-row>
             </v-col>
             <v-col sm="6" cols="12" md="6" lg="6">
@@ -127,7 +125,7 @@ export default {
 <style scoped>
 
 .block_contact{
-    margin-top: 13%;
+    margin-top: 10%;
 }
 
 .logo_contact {
@@ -135,6 +133,10 @@ export default {
     max-width: 35px;
     border-radius: 10%;
     margin: 5%;
+}
+
+.title_contact.sm{
+    margin-top: 3%;
 }
 
 .logo_contact.sm {
@@ -175,7 +177,12 @@ export default {
 }
 
 .block_coord{
+    margin: 5%;
     margin-left: 3%;
+}
+
+.block_coord.sm{
+    margin-left: 6%;
 }
 
 .block_coord.md{

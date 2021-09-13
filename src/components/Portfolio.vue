@@ -20,15 +20,10 @@
                     <v-card class="screen_portfolio" id="card_portfolio" outlined :class="$mq">
                         <v-img class="portfolio_img" :class="$mq" src="@/assets/screen_monsite.png" lazy-src="@/assets/screen_monsite.png">
                         </v-img>
-                        <div class="overlay">
-                            <div class="content_img">
-                                <v-row class="elem_overlay" align="center" justify="space-around">
-                                    <h3 class="font_karla">Site statique réalisé avec vue.js</h3>
-                                </v-row>
-                                <v-row class="elem_overlay" align="center" justify="space-around">
-                                    <v-btn class="font_karla" href="http://localhost:8080/">visiter</v-btn>
-                                </v-row>
-                            </div>
+                        <div class="overlay" :class="$mq">
+                            <v-row class="elem_overlay" align="center" justify="center">
+                                <v-btn class="font_karla" :class="$mq" href="https://sabso7.github.io/theobassobondini/">visiter</v-btn>
+                            </v-row>
                         </div>
                         <v-card-text class="card_screen">
                             <v-row>
@@ -45,15 +40,10 @@
                     <v-card class="screen_portfolio" id="card_portfolio" outlined :class="$mq">
                         <v-img class="portfolio_img" :class="$mq" src="@/assets/screen_bolatto.png" lazy-src="@/assets/screen_bolatto.png">
                         </v-img>
-                        <div class="overlay">
-                            <div class="content_img">
-                                <v-row class="elem_overlay" align="center" justify="space-around">
-                                    <h3 class="font_karla">Site de photographie réalisé avec vue.js <br> et api platform (symfony)</h3>
-                                </v-row>
-                                <v-row class="elem_overlay" align="center" justify="space-around">
-                                    <v-btn class="font_karla" href="https://elodiebolatto.fr/" target="blank">visiter</v-btn>
-                                </v-row>
-                            </div>
+                        <div class="overlay" :class="$mq">
+                            <v-row class="elem_overlay" align="center" justify="space-around">
+                                <v-btn class="font_karla" href="https://elodiebolatto.fr/" target="blank">visiter</v-btn>
+                            </v-row>
                         </div>
                         <v-card-text class="card_screen">
                             <v-row>
@@ -101,14 +91,24 @@ export default {
     display: none;
 }
 
+.overlay.sm {
+    display: none;
+}
+
 #card_portfolio {
-    background-color: #F1F1F1;
+    background-color: #F1F1F1 !important;
     max-width: 500px;
     max-height: 700px;
+    margin-top:5%;
 }
 
 .title_portfolio {
     margin: 4%;
+}
+
+#card_portfolio.md {
+    max-width: 300px;
+    max-height: 400px;
 }
 
 #card_portfolio.sm {
@@ -116,13 +116,17 @@ export default {
     max-height: 400px;
 }
 
+.screen_portfolio:hover .portfolio_img {
+    filter: brightness(50%);
+}
+
 .screen_portfolio:hover .overlay {
-    display: inline;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
     position: absolute;
-    top: 0%;
-    height: 250px;
-    width: 498px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 .show-btns {
@@ -141,6 +145,10 @@ export default {
 }
 
 .portfolio_img.sm {
+    max-height: 150px;
+}
+
+.portfolio_img.md {
     max-height: 150px;
 }
 

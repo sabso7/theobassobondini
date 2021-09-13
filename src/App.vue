@@ -1,6 +1,6 @@
 <template>
 <v-app id="block_app">
-    <div v-if="$mq == 'sm'">
+    <div v-if="$mq == 'sm' || $mq == 'md'">
     <v-app-bar fixed flat dense color="transparent">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -32,7 +32,7 @@
     </v-app-bar>
     <router-view></router-view>
     <v-footer color="black" absolute>
-        <span class="white--text">Sabso &copy; {{ new Date().getFullYear() }}</span>
+        <span class="white--text font_karla">Théo Basso Bondini &copy; {{ new Date().getFullYear() }}</span>
         <v-spacer></v-spacer>
         <v-btn rel="noopener" aria-label="go to github" icon href="https://github.com/sabso7" target="_blank">
             <v-img style="max-width:20px" src="@/assets/github_light.png"></v-img>
