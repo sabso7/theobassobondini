@@ -35,7 +35,7 @@
                 
                 <div id="langage" :class="$mq">
                     <v-row align="center" justify="center">
-                        <v-img contain class="logo_vue" :class="$mq" src="@/assets/vue_logo.png"></v-img>
+                        <v-img contain class="logo_vue" alt="" :class="$mq" src="@/assets/vue_logo.png"></v-img>
                         <v-img contain class="logo_symfo" :class="$mq" src="@/assets/symfony_logo.png"></v-img>
                         <v-img contain class="logo_php" :class="$mq" src="@/assets/php_logo.png"></v-img>
                         <v-img contain class="logo_javascript" :class="$mq" src="@/assets/javascript_logo.png"></v-img>

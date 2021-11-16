@@ -68,7 +68,6 @@ export default {
                     ScrollTrigger.create({
                         trigger: elem,
                         onEnter: function () {
-                            console.log(elem.id);
                             let x = 0;
                             let y = (elem.id == "face2") ? -100:100;
                             elem.style.transform = "translate(" + x + "px, " + y + "px)";
